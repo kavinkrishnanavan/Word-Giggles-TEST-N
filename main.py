@@ -131,7 +131,7 @@ Clearly highlight or repeat the new English word in a natural way
 Keep the humor friendly and age-appropriate
 Meaning in one simple sentence
 Please follow the instructions exactly
-
+The word is {word_input}.
 Output format:
 
 New Word: {word_input}
@@ -189,6 +189,7 @@ Joke:"""
                 # Handle API errors gracefully
 
                 st.error(f"An error occurred during AI generation! Error: {e}")
+
 
 
 
