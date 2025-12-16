@@ -130,6 +130,7 @@ The joke must be short, catchy, and memorable
 Clearly highlight or repeat the new English word in a natural way
 Keep the humor friendly and age-appropriate
 Meaning in one simple sentence
+No asterisks (*) in the answer allowed
 Please follow the instructions exactly
 The word is {word_input}.
 Output format:
@@ -165,14 +166,14 @@ Joke:"""
                 
                 with col_joke_output:
                     st.subheader(f"✨ Word: {new_word.capitalize().replace('*','')}")
-                    st.markdown(f"**Meaning:**  {meaning}")
+                    st.markdown(f"**Meaning:**  {meaning.replace('*','')}")
                     st.markdown("---")
                     st.markdown("**Your Learning Joke:**")
                     # Display the joke using st.markdown with fenced code block (no copy button)
                     st.markdown(
                         f"""
 ```text
-{formatted_joke}
+{formatted_joke..replace('*','')}
 """
                 )
 
@@ -189,6 +190,7 @@ Joke:"""
                 # Handle API errors gracefully
 
                 st.error(f"An error occurred during AI generation! Error: {e}")
+
 
 
 
