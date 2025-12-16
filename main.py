@@ -133,6 +133,7 @@ Meaning in one simple sentence
 No asterisks (*) in the answer allowed
 Please follow the instructions exactly
 The word is {word_input}.
+Also, included with the new word parameter, tell a word which when searched in giphy, will give gifs which is accurate to the word entered by the user. seperate this with a comma (,)
 Output format:
 
 New Word: {word_input}
@@ -190,6 +191,7 @@ Joke:"""
                 # Handle API errors gracefully
 
                 st.error(f"An error occurred during AI generation! Error: {e}")
+
 
 
 
