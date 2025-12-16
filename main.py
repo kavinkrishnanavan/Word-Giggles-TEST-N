@@ -89,7 +89,8 @@ def parse_and_format_response(full_response_text):
 # --- Streamlit UI ---
 
 st.set_page_config(layout="wide")
-st.title("🔤 Word\n🤭 Giggles")
+st.title("🔤 Word")
+st.title("🤭 Giggles")
 st.markdown("Enter a word and it will generate a funny, educational joke for children to easily remember the word!")
 
 # Use st.container to group the input elements
@@ -188,4 +189,5 @@ Joke:"""
                 # Handle API errors gracefully
 
                 st.error(f"An error occurred during AI generation! Error: {e}")
+
 
