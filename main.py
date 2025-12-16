@@ -26,6 +26,10 @@ except Exception as e:
 
 def fetch_gif(word):
     """Fetches a single GIF URL from GIPHY based on the search word."""
+
+    if word == "N/A":
+
+        return "N/A"
     # Ensure you have st.secrets["GIPHY"] configured with your GIPHY API key
     GIPHY_API_KEY = st.secrets.get("GIPHY", "YOUR_GIPHY_API_KEY") 
     GIPHY_SEARCH_URL = "https://api.giphy.com/v1/gifs/search"
@@ -192,6 +196,7 @@ Joke:"""
                 # Handle API errors gracefully
 
                 st.error(f"An error occurred during AI generation! Error: {e}")
+
 
 
 
