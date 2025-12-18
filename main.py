@@ -166,7 +166,7 @@ Joke:"""
                 st.markdown(f"**Meaning:** {meaning.replace('*','')}")
                 st.markdown("---")
                 st.markdown("**Your Learning Joke:**")
-                st.markdown(f"```text\n{formatted_joke.replace('*','')}")
+                st.markdown(f"```text\n{formatted_joke.replace('*','')}   ")
             with col_spacer:
                 gif_url = fetch_gif(new_word)
                 if gif_url:
@@ -184,5 +184,6 @@ Joke:"""
                     )
                 else:
                     st.info(f"Sorry, no GIF found for '{new_word}'.")
+
 
 
