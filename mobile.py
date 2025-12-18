@@ -136,29 +136,28 @@ def generate_joke():
             st.warning("Please enter a word.")
         return
 
-    prompt = f"""
-You are a children's joke writer.
+    prompt = f"""You are a creative children's joke writer.
+Create one simple, short, and funny joke that helps children learn a new English word.
 
-Create ONE short, funny, child-friendly joke to teach a new English word.
-
-The word is: {word}
-Rules:
-- Easy vocabulary
-- Short and memorable
-- Repeat the word naturally
-- One-sentence meaning
-- No asterisks
-- No parentheses
-- No inappropriate language
-
-Output format EXACTLY:
+Requirements:
+Use easy vocabulary suitable for children
+The joke must be short, catchy, and memorable
+Clearly highlight or repeat the new English word in a natural way
+Keep the humor friendly and age-appropriate
+Meaning in one simple sentence
+No asterisks (*) in the answer allowed
+Split it into short lines for better readability
+The word is {word}.
+Block any bad or inappropriate words immediately
+No parentheses allowed
+Please follow the instructions exactly
+Output format:
 
 New Word: {word}
 
 Meaning:
 
-Joke:
-"""
+Joke:"""
 
     with output_container:
         with st.spinner(f"Creating a joke for **{word}**..."):
