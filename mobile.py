@@ -120,7 +120,7 @@ st.text_input(
     on_change=lambda: generate_joke()
 )
 
-st.button("Generate", on_click=lambda: generate_joke())
+st.button("Make", on_click=lambda: generate_joke())
 
 st.markdown("---")
 
