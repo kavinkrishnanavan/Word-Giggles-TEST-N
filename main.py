@@ -143,7 +143,7 @@ Meaning:
 
 Joke:"""
 
-    with output_container:
+    def spinnercalling():
         with st.spinner(f"Generating a joke for **{word_input}**..."):
             try:
                 response = client.responses.create(
@@ -155,7 +155,9 @@ Joke:"""
             except Exception as e:
                 st.error(f"An error occurred during AI generation! Error: {e}")
                 return
+    spinnercalling()
 
+    with output_container:
         # Display results
         if new_word == "N/A":
             st.error("The use of profane or inappropriate language is strictly prohibited.")
@@ -184,6 +186,7 @@ Joke:"""
                     )
                 else:
                     st.info(f"Sorry, no GIF found for '{new_word}'.")
+
 
 
 
